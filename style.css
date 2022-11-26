@@ -330,6 +330,14 @@ text-decoration-line: underline;
         display: none;
     }
 
+    .navigation ul li {
+        margin-left:30px ;
+    }
+
+    .navigation ul li a {
+        font-size: 0.5rem;
+    }
+
     #about .content{
         display: block;
     }
