@@ -360,6 +360,10 @@ text-decoration-line: underline;
         object-fit: cover;
     }
 
+    .navigation2 {
+        width:100%;
+    }
+
     .navigation2 ul li {
         margin: auto;
     }
@@ -383,8 +387,3 @@ text-decoration-line: underline;
         transform: rotate(360deg);
     }
 }
-
-
-
-
-
