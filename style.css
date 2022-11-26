@@ -325,7 +325,7 @@ text-decoration-line: underline;
     }
 }
 
-@media (max-width:1000px) {
+@media (min-width:460px) and (max-width:1000px) {
     .logo a {
         display: none;
     }
@@ -359,8 +359,33 @@ text-decoration-line: underline;
         object-fit: cover;
     }
 
+    .navigation2 ul li {
+        margin: auto;
+    }
+
+    .navigation2 ul li a {
+        transition:all,0.5s;
+        font-size: 1rem;
+        color: white;
+        font-family: 'Zen Kurenaido', sans-serif;
+        letter-spacing: 0.2rem;
+        }
+
 }
 
+@media (max-width:460px){
+    .navigation2 ul li {
+        margin: 0;
+    }
+    .navigation2 ul li:not(:first-child) {
+        margin-left: 10%;
+    }
+    .navigation2 ul li a {
+        transition:all,0.5s;
+        font-size: 0.8rem;
+        letter-spacing: 0.1rem;
+    }
+}
 
 
 @keyframes animate {
@@ -371,3 +396,8 @@ text-decoration-line: underline;
         transform: rotate(360deg);
     }
 }
+
+
+
+
+
