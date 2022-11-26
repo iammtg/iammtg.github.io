@@ -329,6 +329,10 @@ text-decoration-line: underline;
     .logo a {
         display: none;
     }
+
+    .navigation{
+        font-size: 1rem;
+    }
     #about .content{
         display: block;
     }
@@ -373,19 +377,6 @@ text-decoration-line: underline;
 
 }
 
-@media (max-width:520px){
-    .navigation2 ul li {
-        margin: 0;
-    }
-    .navigation2 ul li:not(:first-child) {
-        margin-left: 10%;
-    }
-    .navigation2 ul li a {
-        transition:all,0.5s;
-        font-size: 0.8rem;
-        letter-spacing: 0.1rem;
-    }
-}
 
 
 @keyframes animate {
@@ -396,3 +387,8 @@ text-decoration-line: underline;
         transform: rotate(360deg);
     }
 }
+
+
+
+
+
