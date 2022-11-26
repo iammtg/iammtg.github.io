@@ -49,7 +49,7 @@ header {
 
 .navigation ul li a {
 transition:all,0.5s;
-font-size: 0.3rem;
+font-size: 0.7rem;
 }
 
 .navigation ul li a:hover {
@@ -330,9 +330,6 @@ text-decoration-line: underline;
         display: none;
     }
 
-    .navigation ul li a {
-        font-size: 0.5rem;
-    }
     #about .content{
         display: block;
     }
@@ -369,12 +366,11 @@ text-decoration-line: underline;
 
     .navigation2 ul li a {
         transition:all,0.5s;
-        font-size: 1rem;
+        font-size: 0.8rem;
         color: white;
         font-family: 'Zen Kurenaido', sans-serif;
-        letter-spacing: 0.2rem;
+        letter-spacing: 0.1rem;
         }
-
 }
 
 
@@ -387,6 +383,8 @@ text-decoration-line: underline;
         transform: rotate(360deg);
     }
 }
+
+
 
 
 
