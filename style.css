@@ -325,7 +325,7 @@ text-decoration-line: underline;
     }
 }
 
-@media (min-width:460px) and (max-width:1000px) {
+@media  (max-width:1000px) {
     .logo a {
         display: none;
     }
@@ -387,8 +387,6 @@ text-decoration-line: underline;
         transform: rotate(360deg);
     }
 }
-
-
 
 
 
