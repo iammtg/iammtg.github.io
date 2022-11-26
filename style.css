@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;500;700&family=Sawarabi+Mincho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300;1,400&display=swap');
+
+* {
+    font-family: 'Noto Sans JP', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background:white;
+}
+
+/* ヘッダー */
+header {
+    color:#1a3845;
+    background: #F4F1F0;
+    display: flex;
+    width: 100%;
+    height:40px;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin:0 auto;
+    padding: 0 5%;
+}
+
+
+.logo img{
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+    margin-right:15px;
+}
+.logo a  {
+    font-size: 1rem;
+    font-family: 'Yusei Magic', sans-serif;
+    font-style:oblique;
+}
+
+.navigation ul {
+    display:flex;
+}
+
+.navigation ul li {
+    margin-left:50px ;
+}
+
+.navigation ul li a {
+transition:all,0.5s;
+font-size: 0.6rem;
+}
+
+.navigation ul li a:hover {
+color:rgb(255, 22, 173);
+text-decoration-line: underline;
+}
+
+/* 画像 */
+#mainvisual {
+    width: 100%;
+    height: 75vh;
+    right: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: relative;
+    border-bottom: 3px solid #1a3845;
+    border-top: 3px solid #1a3845;
+}
+
+#mainvisual img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+/* clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%); */
+}
+
+.overlay {
+    position: absolute;
+    top:0;
+    left:0 ;
+    width: 100%;
+    height:100%;
+    background: orange;
+    z-index: 1;
+    opacity: 20%;
+    /* clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%); */
+}
+
+.titletext {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    height:250px;
+    width:250px;
+    z-index: 2;
+    text-align: center;
+    background-image: url(./img/REUNION.png);
+    background-size: cover;
+}
+
+
+.title-box {
+    position: absolute;
+    height: 98%;
+    width: 98%;
+    top: 1%;
+    left: 1%;
+    border: 3px #C8D7D2 solid ;
+}
+
+.square1 {
+    position: absolute;
+    height: 90%;
+    width: 90%;
+    top: 5%;
+    left: 5%;
+    border: 3px solid #D74339;
+    animation: animate 15s linear infinite;
+    z-index: 1;
+}
+
+.square2 {
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    top: 10%;
+    right: 10%;
+    border: 3px solid #1a3845;
+    animation: animate 30s linear infinite;
+    animation-direction: reverse;
+}
+
+
+
+/* section共通 */
+.wave-container {
+    width: 100%;
+}
+
+.wave-container img {
+    width: 100%;
+    object-fit: cover;
+}
+.wrapper {
+    max-width: 100%;
+    margin: 0;
+    padding: 10% 7%;
+    text-align: center;
+    background:white;
+}
+
+.sectiontitle {
+    font-family: 'Zen Kurenaido', sans-serif;
+    display: inline-block;
+    font-size: 2rem;
+    letter-spacing: 0.4rem;
+    color: #1a3845;
+    text-align: center;
+    margin-bottom: 100px;
+    padding: 0 65px;
+    position: relative; 
+}
+
+.sectiontitle::before,
+.sectiontitle::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 2px ;
+    display: block;
+    background-color: #1a3845;
+}
+
+.sectiontitle::before{
+    left: 0;
+}
+.sectiontitle::after{
+    right: 0;
+}
+
+/* About */
+
+#about .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F4F1F0;
+}
+ 
+.about-text {
+    /* background-color: blue; */
+    width: 500px;
+    height: 400px;
+    padding: 50px 0;
+}
+
+.about-text dl {
+    
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-text dl dt{
+    font-family: 'Zen Kurenaido', sans-serif;
+    margin-top: 7px;
+    width: 35%;
+    font-size: 1rem;
+}
+
+.about-text dl dd {
+    font-family: 'Yusei Magic', sans-serif;
+    width: 65%;
+    margin-bottom: 50px;
+    font-size: 1.5rem;
+}
+
+dl dd a {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bold;
+}
+
+.about-text dd span {
+    font-size: 0.9rem;
+}
+
+.about-img{
+    display: block;
+}
+
+.about-img img {
+    width: 600px;
+    clip-path: polygon(35% 0, 100% 0%, 100% 100%, 0% 100%);
+    object-fit: cover;
+}
+
+/* News */
+.news-text{ 
+    margin: 10px auto;
+    width: 400px;
+}
+
+.newsArea {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.newsArea:not(:nth-child(1)){
+    border-top: 1px solid #1a3845;
+}
+
+.newsArea dt {
+    display: flex;
+    width: 100%;
+    height: 22px;
+    margin-top: 20px;
+}
+
+.newsArea-day {
+    width: 24%;
+}
+
+.newsArea-category.koushin{
+    width: 11%;
+    margin: 0 10px;
+    background-color: #1a3845;
+    color: white;
+}
+
+.newsArea-category.jyuyou{
+    width: 11%;
+    margin: 0 10px;
+    background-color: #D74339;
+    color: white;
+}
+
+
+
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
