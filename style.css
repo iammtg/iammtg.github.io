@@ -330,8 +330,8 @@ text-decoration-line: underline;
         display: none;
     }
 
-    .navigation{
-        font-size: 1rem;
+    .navigation ul li a {
+        font-size: 0.5rem;
     }
     #about .content{
         display: block;
