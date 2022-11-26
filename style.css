@@ -373,7 +373,7 @@ text-decoration-line: underline;
 
 }
 
-@media (max-width:460px){
+@media (max-width:520px){
     .navigation2 ul li {
         margin: 0;
     }
