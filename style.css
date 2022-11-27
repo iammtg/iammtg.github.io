@@ -187,18 +187,35 @@ object-fit: cover;
 
 /* About */
 
+#about p {
+    width: 80%px;
+    margin: 0 10% 100px;
+    padding-left: 0;
+    font-size: 1.3rem;
+}
+
 #about .content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: rgb(244,241,240);
+    background: linear-gradient(0deg, rgba(244,241,240,1) 0%, rgba(218,245,242,1) 49%, rgba(244,241,240,1) 100%);
     border: 2px solid #1a3845 ;
 }
  
 .about-text {
     width: 500px;
     height: 400px;
-    padding: 50px 0;
+    padding: 0;
+}
+
+.about-text h2 {
+    color: #1a3845;
+    background-color: #C8D7D2;
+    width: 150px;
+    height: 50px;
+    font-size: 2.5rem;
+    margin: 0 auto 40px;
 }
 
 .about-text dl {
@@ -240,7 +257,7 @@ dl dd a {
 /* News */
 .news-text{ 
     margin: 10px auto;
-    width: 400px;
+    width: 360px;
 }
 
 .newsArea {
@@ -275,6 +292,10 @@ dl dd a {
     margin: 0 10px;
     background-color: #D74339;
     color: white;
+}
+
+.newsArea-text {
+    margin-top: 10px;
 }
 
 /* footer */
@@ -330,21 +351,13 @@ text-decoration-line: underline;
         display: none;
     }
 
-    .navigation ul li {
-        margin-left:30px ;
-    }
-
-    .navigation ul li a {
-        font-size: 0.5rem;
-    }
-
     #about .content{
         display: block;
     }
     .about-text {
         width: 100%;
         height: 400px;
-        padding: 50px 0;
+        padding: 10px 0;
     }
     
     .about-text dl {
@@ -367,11 +380,10 @@ text-decoration-line: underline;
         clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
         object-fit: cover;
     }
-
+    
     .navigation2 {
-        width:100%;
+        width: 100%;
     }
-
     .navigation2 ul li {
         margin: auto;
     }
@@ -385,6 +397,34 @@ text-decoration-line: underline;
         }
 }
 
+@media  (max-width:500px) {
+
+    .navigation ul li {
+        margin-left:20px ;
+    }
+    
+    .navigation ul li a {
+    font-size: 0.5rem;
+    }
+
+
+}
+
+@media (max-width:390px) {
+    .newsArea {
+        width: 90%;
+        font-size: 0.7rem;
+    }
+
+    .newsArea-category.jyuyou{
+        height: 15px;
+    }
+
+    .newsArea-category.koushin{
+        height: 15px;
+    }
+}
+
 
 
 @keyframes animate {
@@ -395,3 +435,4 @@ text-decoration-line: underline;
         transform: rotate(360deg);
     }
 }
+
