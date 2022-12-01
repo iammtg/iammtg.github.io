@@ -68,6 +68,7 @@ text-decoration-line: underline;
     position: relative;
     border-bottom: 3px solid #1a3845;
     border-top: 3px solid #1a3845;
+    margin-bottom: 60px;
 }
 
 #mainvisual img{
@@ -141,12 +142,14 @@ object-fit: cover;
 /* section共通 */
 .wave-container {
     width: 100%;
+    z-index: 1;
 }
 
 .wave-container img {
     width: 100%;
     object-fit: cover;
 }
+
 .wrapper {
     max-width: 100%;
     margin: 0;
@@ -187,11 +190,41 @@ object-fit: cover;
 
 /* About */
 
+#about {
+    background-color: rgb(240, 244, 243);
+    z-index: 10;
+}
+
+#about h3 {
+    font-size: 3rem;
+    font-weight: lighter;
+    color: #1a3845;
+    text-shadow:1px 1px 0 #F4F1F0, -1px -1px 0 #F4F1F0,
+    -1px 1px 0 #F4F1F0, 1px -1px 0 #F4F1F0,
+    0px 1px 0 #F4F1F0,  0-1px 0 #F4F1F0,
+    -1px 0 0 #F4F1F0, 1px 0 0 #F4F1F0;
+    font-style: italic;
+}
+
+#about h3 span {
+    margin-left: 0px;
+}
+
+#about h3 span::before{
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 2px;
+    margin-bottom: 14px;
+    background-color: #1a3845;
+}
+
 #about p {
-    width: 80%px;
-    margin: 0 10% 100px;
+    width: 80%;
+    margin: 20px 10% 100px;
     padding-left: 0;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    font-weight:300;
 }
 
 #about .content {
@@ -211,11 +244,9 @@ object-fit: cover;
 
 .about-text h2 {
     color: #1a3845;
-    background-color: #C8D7D2;
-    width: 150px;
-    height: 50px;
     font-size: 2.5rem;
     margin: 0 auto 40px;
+    text-shadow: 12px 3px 2px rgba(0,0,0,0.3);
 }
 
 .about-text dl {
@@ -224,7 +255,7 @@ object-fit: cover;
 }
 
 .about-text dl dt{
-    font-family: 'Zen Kurenaido', sans-serif;
+    /* font-family: 'Zen Kurenaido', sans-serif; */
     margin-top: 7px;
     width: 35%;
     font-size: 1rem;
@@ -254,7 +285,18 @@ dl dd a {
     object-fit: cover;
 }
 
+.map-container iframe{
+    margin-top: 60px;
+    width: 90%;
+    aspect-ratio: 10/9;
+    border: 1px solid #1a3845;
+}
+
+
 /* News */
+#news {
+   background-color: rgb(248, 250, 243);
+}
 .news-text{ 
     margin: 10px auto;
     width: 360px;
@@ -298,11 +340,16 @@ dl dd a {
     margin-top: 10px;
 }
 
+/* Timetable */
+#timetable {
+    background-color: rgb(252, 242, 244);
+    height: 600px;
+}
+
 /* footer */
 footer {
     width: 100%;
     height: 80px;
-    margin-top: 200px;
     background-color: #1a3845;
 }
 
@@ -352,30 +399,58 @@ text-decoration-line: underline;
     }
 
     #about .content{
+        width: 100%;
         display: block;
+        border: none;
     }
     .about-text {
         width: 100%;
-        height: 400px;
         padding: 10px 0;
+        background-image: url("./img/top_party_img_sp.jpg");
+        background-position: cover;
+        position: relative;
     }
-    
+
+    .about-text h2 {
+        color: black;
+        font-size: 2rem;
+        height: 40px;
+        background:none;
+    }
+
     .about-text dl {
         display: flex;
         flex-wrap: wrap;
+        position: relative;
     }    
+
+    .about-text dl::after{
+        content: "";
+        width: 100%;
+        height: 90%;
+        display: block;
+        position: absolute;
+        top: -10px;
+        left: 0;
+        z-index: 1;
+        background-color: rgb(0,0,0,0.05);
+        backdrop-filter: blur(5px);
+    }
     .about-text dl dt{
         margin-top: 7px;
         width: 35%;
         font-size: 1rem;
+        z-index: 2;
     }
     
     .about-text dl dd {
         width: 65%;
         margin-bottom: 50px;
         font-size: 1.5rem;
+        z-index: 2;
     }
     .about-img img {
+        display: none;
         width: 100%;
         clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
         object-fit: cover;
@@ -435,4 +510,8 @@ text-decoration-line: underline;
         transform: rotate(360deg);
     }
 }
+
+
+
+
 
