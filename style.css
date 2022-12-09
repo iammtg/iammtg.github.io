@@ -12,6 +12,72 @@ body {
     background:white;
 }
 
+/* Loading背景画面設定　*/
+#splash {
+    /*fixedで全面に固定*/
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: 999;
+      background:#333;
+      text-align:center;
+      color:#fff;
+    }
+    
+    /* Loading画像中央配置　*/
+    #splash_logo {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      background : rgb(236, 235, 235);
+      transform: translate(-50%, -50%);
+    }
+    
+    /* Loading アイコンの大きさ設定　*/
+    #splash_logo img {
+      width:260px;
+    }
+
+    #splash-text {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    #splash-text p {
+        position: absolute;
+        display: inline-block;
+        color: white;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        height: 20px;
+        width: 200px;
+        padding: auto;
+    }
+
+
+    /* fadeUpをするアイコンの動き */
+    .fadeUp{
+    animation-name: fadeUpAnime;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+    }
+    
+    @keyframes fadeUpAnime{
+      from {
+        opacity: 0;
+      transform: translateY(100px);
+      }
+    
+      to {
+        opacity: 1;
+      transform: translateY(0);
+      }
+    }
+
+
 /* ヘッダー */
 header {
     color:#1a3845;
@@ -32,6 +98,7 @@ header {
     width: 30px;
     object-fit: cover;
     margin-right:15px;
+    border: 1px solid #1a3845;
 }
 .logo a  {
     font-size: 1rem;
@@ -71,14 +138,21 @@ text-decoration-line: underline;
     margin-bottom: 60px;
 }
 
+#mainvisual video {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+}
+
 #mainvisual img{
 width: 100%;
 height: 100%;
 object-fit: cover;
-/* clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%); */
+clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
 }
 
-.overlay {
+/* .overlay {
     position: absolute;
     top:0;
     left:0 ;
@@ -86,9 +160,10 @@ object-fit: cover;
     height:100%;
     background: orange;
     z-index: 1;
-    opacity: 20%;
-    /* clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%); */
-}
+    opacity: 0.5%;
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}  */
+
 
 .titletext {
     position: absolute;
@@ -190,20 +265,20 @@ object-fit: cover;
 
 /* About */
 
-#about {
+/* #about {
     background-color: rgb(240, 244, 243);
     z-index: 10;
-}
+} */
 
 #about h3 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: lighter;
-    color: #1a3845;
-    text-shadow:1px 1px 0 #F4F1F0, -1px -1px 0 #F4F1F0,
-    -1px 1px 0 #F4F1F0, 1px -1px 0 #F4F1F0,
-    0px 1px 0 #F4F1F0,  0-1px 0 #F4F1F0,
-    -1px 0 0 #F4F1F0, 1px 0 0 #F4F1F0;
-    font-style: italic;
+    color: black;
+    /* text-shadow:1px 1px 0 #000, -1px -1px 0 #000,
+    -1px 1px 0 #000, 1px -1px 0 #000,
+    0px 1px 0 #000,  0 1px 0 #000,
+    -1px 0 0 #000, 1px 0 0 #000; */
+    animation: fadein 3s linear;
 }
 
 #about h3 span {
@@ -214,9 +289,10 @@ object-fit: cover;
     content: "";
     display: inline-block;
     width: 40px;
-    height: 2px;
+    height: 1px;
     margin-bottom: 14px;
-    background-color: #1a3845;
+    margin-right: 6px;
+    background-color: black;
 }
 
 #about p {
@@ -294,9 +370,9 @@ dl dd a {
 
 
 /* News */
-#news {
+/* #news {
    background-color: rgb(248, 250, 243);
-}
+} */
 .news-text{ 
     margin: 10px auto;
     width: 360px;
@@ -341,11 +417,12 @@ dl dd a {
 }
 
 /* Timetable */
-#timetable {
-    background-color: rgb(252, 242, 244);
-    height: 600px;
-}
+ #timetable {
+    height: 300px;
+} 
 
+#faq {
+}
 /* footer */
 footer {
     width: 100%;
@@ -401,7 +478,6 @@ text-decoration-line: underline;
     #about .content{
         width: 100%;
         display: block;
-        border: none;
     }
     .about-text {
         width: 100%;
@@ -415,7 +491,9 @@ text-decoration-line: underline;
         color: black;
         font-size: 2rem;
         height: 40px;
-        background:none;
+        margin: 10px 25px 30px 25px;
+        background-color: rgba(0,0,0,0.1);
+        border: 1px solid #1a3845;
     }
 
     .about-text dl {
@@ -434,7 +512,8 @@ text-decoration-line: underline;
         left: 0;
         z-index: 1;
         background-color: rgb(0,0,0,0.05);
-        backdrop-filter: blur(5px);
+        backdrop-filter: blur(2px);
+        border: 1px solid #F4F1F0;
     }
     .about-text dl dt{
         margin-top: 7px;
@@ -508,6 +587,15 @@ text-decoration-line: underline;
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 }
 
