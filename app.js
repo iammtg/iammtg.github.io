@@ -14,5 +14,22 @@ $(function () {
         $('body,html').animate({scrollTop: pos}, 500); //取得した位置にスクロール。500の数値が大きくなるほどゆっくりスクロール
         return false;
      });
+
+     $(window).scroll(function () {
+        const windowHeight = $(window).height();
+        const scroll = $(window).scrollTop();
+
+        let elem1Top = $('.elem1').offset().top;
+        let elem2Top = $('.elem2').offset().top;
+
+        if(scroll > elem1Top - windowHeight + 200){
+          $('.elem1').animate({opacity: 1},1000);
+        }
+
+        if(scroll > elem2Top - windowHeight + 200){
+          $('.elem2').animate({left: 0},500);
+        }
+
+      });
 });
 
