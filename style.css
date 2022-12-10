@@ -495,7 +495,7 @@ dl dd a {
 }
 
 .faq-text dt {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     display: flex;
 }
 
@@ -515,7 +515,7 @@ dl dd a {
 
 
 .faq-text dd {
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding-left: 70px;
     padding-right: 30px;
     padding-top: 5px;
