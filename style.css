@@ -104,8 +104,8 @@ body {
     width: 30px;
     height: 30px;
     border: calc(30px / 7) solid transparent;
-    border-right-color: #ff1d5e;
-    border-top-color: #ff1d5e;
+    border-right-color: #D74339;
+    border-top-color: #D74339;
     border-radius: 50%;
     box-sizing: border-box;
     animation: spring-spinner-animation 3s ease-in-out infinite;
@@ -357,6 +357,7 @@ clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
     padding-left: 0;
     font-size: 1.2rem;
     font-weight:300;
+    font-style: italic;
 }
 
 
@@ -495,7 +496,7 @@ dl dd a {
 }
 
 .faq-text dt {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     display: flex;
 }
 
@@ -515,7 +516,7 @@ dl dd a {
 
 
 .faq-text dd {
-    font-size: 1rem;
+    font-size: 1.1rem;
     padding-left: 70px;
     padding-right: 30px;
     padding-top: 5px;
