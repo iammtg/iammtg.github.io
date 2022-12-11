@@ -496,13 +496,13 @@ dl dd a {
 }
 
 .faq-text dt {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     display: flex;
 }
 
 .faq-text dt i {
     width: 40px;
-    font-size: 2.2rem;
+    font-size: 2rem;
     color: #1a3845;
 }
 
@@ -516,7 +516,7 @@ dl dd a {
 
 
 .faq-text dd {
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding-left: 70px;
     padding-right: 30px;
     padding-top: 5px;
