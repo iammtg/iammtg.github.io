@@ -442,7 +442,8 @@ dl dd a {
 } */
 .news-text{ 
     margin: 10px auto;
-    width: 360px;
+    width: auto;
+    text-align: left;
 }
 
 .newsArea {
@@ -466,14 +467,14 @@ dl dd a {
 }
 
 .newsArea-category.koushin{
-    width: 11%;
+    width: 35px;
     margin: 0 10px;
     background-color: #1a3845;
     color: white;
 }
 
 .newsArea-category.jyuyou{
-    width: 11%;
+    width: 35px;
     margin: 0 10px;
     background-color: #D74339;
     color: white;
@@ -481,6 +482,7 @@ dl dd a {
 
 .newsArea-text {
     margin-top: 10px;
+    margin-left: 25%;
 }
 
 /* Timetable */
@@ -690,11 +692,27 @@ footer h3 {
 
     .newsArea-category.jyuyou{
         height: 15px;
+        width: 25px;
     }
 
     .newsArea-category.koushin{
         height: 15px;
+        width: 25px;
     }
+
+    .faq-text dt {
+        font-size: 1rem;
+        display: flex;
+    }
+    
+    .faq-text dt i {
+        font-size: 1.7rem;
+    }
+    
+    .faq-text dd {
+        font-size: 0.8rem;
+    }
+
 }
 
 
