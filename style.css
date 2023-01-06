@@ -490,6 +490,24 @@ dl dd a {
     height: 500px;
 } 
 
+ #timetable dl{
+    display: flex;
+ }
+
+ #timetable dt {
+    padding-right: 60px;
+    width: 40%;
+    text-align: right;
+    font-weight: 300;
+ }
+
+ #timetable dd {
+    width: 50%;
+    text-align: left;
+    font-weight: 300;
+    margin-bottom:20px;
+ }
+
 
 .faq-text dl {
     text-align: left;
